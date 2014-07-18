@@ -1095,3 +1095,29 @@ li {
 .form-item.form-type-item {
   display: none;
 }
+
+.infolink
+{
+    display: inline-block;
+    font-family: sans-serif;
+    font-weight: bold;
+    text-align: center;
+    width: 1.8ex;
+    height: 1.8ex;
+    line-height: 1.8ex;
+    border-radius: 1.2ex;
+    margin-right: 4px;
+    padding: 1px;
+    color: blue;
+    background: white;
+    border: 1px solid blue;
+    text-decoration: none;
+}
+
+.infolink:hover
+{
+    color: white;
+    background: blue;
+    border-color: white;
+    text-decoration: none;
+}

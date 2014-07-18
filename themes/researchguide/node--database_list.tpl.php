@@ -161,7 +161,7 @@ HERE;
       $desc .= "<span style='display:block'>$db_refworks</span>";
       $desc .= '</p>';
 
-      $db_display = "<span onclick='jQuery(\"[name=\\\"dbdesc_$nid\\\"]\").toggle();' style='font-weight: bold'>(?)</span>";
+      $db_display = "<span onclick='jQuery(\"[name=\\\"dbdesc_$nid\\\"]\").toggle();' class='infolink'>?</span>";
     }
 
     if ($cur_db_notes) {
