@@ -1,6 +1,4 @@
 <?php
-// $Id: node.tpl.php,v 1.7 2007/08/07 08:39:36 goba Exp $
-
   global $language;
   global $base_url;
 
@@ -102,15 +100,19 @@ HERE;
     $cur_db_node = node_load($nid);
 
     // Grab the URL & description
-    $cur_db_title = htmlspecialchars($cur_db_node->title);
-    $cur_db_url = htmlspecialchars($cur_db_node->field_database_url['und'][0]['url']);
-    $cur_db_desc = htmlspecialchars($cur_db_node->field_database_description['und'][0]['value']);
+    $raw_db_title = $cur_db_node->title;
+    $cur_db_title = htmlspecialchars($raw_db_title);
+    $raw_db_url = $cur_db_node->field_database_url['und'][0]['url'];
+    $cur_db_url = htmlspecialchars($raw_db_url);
+    $raw_db_desc = $cur_db_node->field_database_description['und'][0]['value'];
+    $cur_db_desc = htmlspecialchars($raw_db_desc);
     $cur_db_multi = $cur_db_node->field_multidisciplinary['und'][0]['value'];
     $cur_db_proxy = $cur_db_node->field_proxied['und'][0]['value'];
     $cur_db_new = $cur_db_node->field_new['und'][0]['value'];
     $cur_db_expires = $cur_db_node->field_database_expiration_date['und'][0]['value2'];
     $cur_db_refworks = htmlspecialchars($cur_db_node->field_refworks['und'][0]['value']);
-    $cur_db_notes = htmlspecialchars($cur_db_node->field_notes['und'][0]['value']);
+    $raw_db_notes = $cur_db_node->field_notes['und'][0]['value'];
+    $cur_db_notes = htmlspecialchars($raw_db_notes);
 
     // Skip the database if it is not published
     if (!$cur_db_node->status) {
@@ -142,6 +144,7 @@ HERE;
     // Proxy 'em if you got 'em
     if ($cur_db_proxy) {
       $cur_db_url = "http://librweb.laurentian.ca/login?url=$cur_db_url";
+      $raw_db_url = "http://librweb.laurentian.ca/login?url=$raw_db_url";
     }
     $db_display = '';
     $db_edit = '';
@@ -195,9 +198,18 @@ HERE;
 
     // If we've made it this far, we have content
     $node_has_content = true;
+
+    // json content
+    $result_array[] = array($raw_db_title => array('description' => $raw_db_desc, 'url' => $raw_db_url, 'notes' => $raw_db_notes));
   }
   $node_out .= $db_edit_list;
   $node_out .= "</ul></div>";
+
+  // json output?
+  if (array_key_exists('json', drupal_get_query_parameters())) {
+    drupal_json_output($result_array);
+    drupal_exit();
+  }
 
   if ($node_has_content) {
     print($node_out);

@@ -1,3 +1,9 @@
+<?php 
+  if (array_key_exists('json', drupal_get_query_parameters())) {
+    print render($page['content']);
+    drupal_exit();
+  }
+?>
 <!--
 /* 
  * The header displays the Laurentian Logo, site name, Language selection, and the Navigation bar,
