@@ -50,7 +50,7 @@
  * The content section displays the guides, databases, database lists, etc.
  */
 -->
-<div id="content">
+<div id="main-content">
   <?php print render($breadcrumb); ?>
   <div class="tabs"> 
     <?php print render($tabs); ?>
