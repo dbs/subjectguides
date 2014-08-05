@@ -1,5 +1,9 @@
 <?php 
-  if (array_key_exists('json', drupal_get_query_parameters())) {
+  // Special case for JSON output
+  if (
+      array_key_exists('json', drupal_get_query_parameters())
+      || strpos(request_path(), 'guides-json') !== FALSE
+  ) {
     print render($page['content']);
     drupal_exit();
   }
