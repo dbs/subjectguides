@@ -343,7 +343,7 @@ ul.secondary li.active a.active {
   color: #fff;
   background: #666;
 }
-#content {
+#content, #main-content {
   padding: 1em;
 }
 #header {
@@ -854,7 +854,7 @@ body.in-maintenance #sidebar-first {
   float: left; /* LTR */
   width: 200px;
 }
-body.in-maintenance #content {
+body.in-maintenance #content, body.in-maintenance #main-content {
   float: right; /* LTR */
   width: 550px;
   padding-right: 20px; /* LTR */
@@ -938,7 +938,7 @@ ol.task-list li.done {
   margin: -1.4em 0 0.3em 0; /* LTR */
   overflow: visible;
 }
-.overlay #content {
+.overlay #content, .overlay #main-content {
   padding: 0;
 }
 h1#overlay-title {
