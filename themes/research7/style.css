@@ -1089,7 +1089,7 @@ li.en.first.active {
 li.fr.last.active {
   display: none;
 }
-li {
+ul li {
   list-style-type: disc;
 }
 .form-item.form-type-item {
