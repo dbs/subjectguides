@@ -1,7 +1,18 @@
 #block-googlecse2-google-custom-search {
     width: 25em;
-    float: right;
     position: absolute;
     top: 0px;
     right: 0px;
+}
+
+#gsc-input-box {
+    border: 0;
+}
+
+.gsc-input {
+    padding: 0;
+}
+
+td.gsib_a, td.gsib_b {
+    padding: 0;
 }
