@@ -1,4 +1,4 @@
 name = Google Custom Search Engine (French)
 description = Search a site with Google custom search.
 core = 7.x
-stylesheets[all][] = googlecse2.css
+stylesheets[all][] = googlecse2_fr.css
