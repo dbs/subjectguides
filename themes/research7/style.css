@@ -1092,9 +1092,6 @@ li.fr.last.active {
 ul li {
   list-style-type: disc;
 }
-.form-item.form-type-item {
-  display: none;
-}
 
 .infolink
 {
