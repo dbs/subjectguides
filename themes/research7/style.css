@@ -7,7 +7,7 @@ body {
   background: #fff;
   font: normal 81.3%/1.538em "Lucida Grande", "Lucida Sans Unicode", sans-serif;
 }
-a {
+a, a:link, a:visited {
   color: #0074BD;
   text-decoration: none;
 }
@@ -257,7 +257,7 @@ pre {
  * Tabs.
  */
 ul.primary {
-  float: right; /* LTR */
+  float: left; /* LTR */
   border-bottom: none;
   text-transform: uppercase;
   font-size: 0.923em;
@@ -340,8 +340,11 @@ ul.secondary li.active a.active {
   color: #fff;
   background: #666;
 }
-#content, #main-content {
+#content, #main-content, .region.region-content {
   clear: left;
+}
+#content, #main-content {
+  padding: 0 1em;
 }
 #header {
   background-color: #fff;
