@@ -16,3 +16,9 @@
 td.gsib_a, td.gsib_b {
     padding: 0;
 }
+td.gsc-table-cell-snippet-close {
+    padding-left: 8px;
+}
+.gsc-webResult .gsc-result {
+    padding: 0;
+}
