@@ -260,7 +260,6 @@ ul.primary {
   float: left; /* LTR */
   border-bottom: none;
   font-size: 0.923em;
-  height: 2.60em;
   margin: 0;
   padding-top: 0;
 }
@@ -277,9 +276,7 @@ ul.primary li a:hover,
 ul.primary li.active a {
   display: block;
   float: left; /* LTR */
-  height: 2.60em;
-  line-height: 2.60em;
-  padding: 0 18px 8px;
+  padding: 9px 18px 8px;
   background-color: #a6a7a2;
   color: #000;
   font-weight: bold;
