@@ -1,27 +1,18 @@
+
 /**
  * Generic elements.
  */
 body {
-  margin: 0;
-  padding: 0;
   color: #000;
   background: #fff;
-  font: 76% Verdana, Arial, Helvetica, sans-serif;
+  font: normal 81.3%/1.538em "Lucida Grande", "Lucida Sans Unicode", sans-serif;
 }
 a {
-  font-weight: bold;
+  color: #0074BD;
   text-decoration: none;
-  color: #39C;
 }
 a:hover {
-  color: #39C;
   text-decoration: underline;
-}
-a:visited {
-  color: #39C;
-}
-a:link {
-  color: #39C;
 }
 hr {
   margin: 0;
@@ -39,23 +30,27 @@ h3,
 h4,
 h5,
 h6 {
-  margin-bottom: 0.5em;
+  font-weight: bold;
+  margin: 10px 0;
 }
 h1 {
-  font-size: 1.3em;
+  font-size: 1.538em;
 }
 h2 {
-  font-size: 1.2em;
+  font-size: 1.385em;
 }
-h3,
-h4,
+h3 {
+  font-size: 1.231em;
+}
+h4 {
+  font-size: 1.154em;
+}
 h5,
 h6 {
-  font-size: 1.1em;
-} 
+  font-size: 1.077em;
+}
 p {
-  margin-top: 0.5em;
-  margin-bottom: 0.9em;
+  margin: 1em 0;
 }
 dl {
   margin: 0 0 20px;
@@ -106,6 +101,7 @@ acronym {
 ul,
 .block ul,
 .item-list ul {
+  list-style-type: disc;
   list-style-image: none;
   margin: 0.25em 0 0.25em 1.5em; /* LTR */
 }
@@ -127,12 +123,12 @@ ol {
 }
 .item-list ul li.collapsed,
 ul.menu li.collapsed {
-/*  list-style-image:url(../../misc/menu-collapsed.png);*/
+  list-style-image:url(/research/misc/menu-collapsed.png);
   list-style-type:disc;
 }
 .item-list ul li.expanded,
 ul.menu li.expanded {
-  list-style-image:url(../../misc/menu-expanded.png);
+  list-style-image:url(/research/misc/menu-expanded.png);
   list-style-type:circle;
 }
 quote,
@@ -261,10 +257,11 @@ pre {
  * Tabs.
  */
 ul.primary {
-  width: 100%;
-  float: left; /* LTR */
+  float: right; /* LTR */
   border-bottom: none;
-  font-size: 0.80em;
+  text-transform: uppercase;
+  font-size: 0.923em;
+  height: 2.60em;
   margin: 0;
   padding-top: 0;
 }
@@ -281,7 +278,7 @@ ul.primary li a:hover,
 ul.primary li.active a {
   display: block;
   float: left; /* LTR */
-  height: 1.5em;
+  height: 2.60em;
   line-height: 2.60em;
   padding: 0 18px 8px;
   background-color: #a6a7a2;
@@ -344,7 +341,7 @@ ul.secondary li.active a.active {
   background: #666;
 }
 #content, #main-content {
-  padding: 1em;
+  clear: left;
 }
 #header {
   background-color: #fff;
@@ -485,7 +482,8 @@ table {
   width: 100%;
   font-size: 0.923em;
   margin: 0 0 10px;
-  border: 1px solid #bebfb9;
+  /* Messes up Google CSE */
+  /* border: 1px solid #bebfb9; */
 }
 table td,
 table th {
@@ -518,6 +516,12 @@ table th {
   border-style: solid;
   border-color: #bebfb9;
   padding: 3px 10px;
+}
+/**
+ * Force browsers to calculate the width of a 'select all' TH element.
+ */
+table th.select-all {
+  width: 1px;
 }
 table th.active {
   background: #bdbeb9;
