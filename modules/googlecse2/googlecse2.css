@@ -22,3 +22,6 @@ td.gsc-table-cell-snippet-close {
 .gsc-webResult .gsc-result {
     padding: 0;
 }
+td.gsc-table-cell-thumbnail.gsc-thumbnail {
+    padding: 0px 8px;
+}
