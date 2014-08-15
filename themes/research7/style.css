@@ -1036,7 +1036,6 @@ div.add-or-remove-shortcuts {
   -webkit-border-radius: 8px;
   border-radius: 8px;
 }
-
 /* Additional miscellaneous styles 
  */
 .block-nice_menus {
@@ -1117,4 +1116,9 @@ ul li {
     background: blue;
     border-color: white;
     text-decoration: none;
+}
+
+/* Get tabs clear of status message */
+div.messages.status {
+    clear: both;
 }
