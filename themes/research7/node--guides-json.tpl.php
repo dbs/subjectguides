@@ -4,7 +4,7 @@
 
   /* Get all research guides that have been published in the requested language */
   $result = db_query("
-    SELECT n.title, ua.alias, n.nid, ttd.name
+    SELECT DISTINCT ON (n.title) n.title, ua.alias, n.nid, ttd.name
     FROM {node} n
       INNER JOIN {url_alias} ua ON ua.source = CONCAT('node/', n.nid)
       INNER JOIN {taxonomy_index } ti ON ti.nid = n.nid
