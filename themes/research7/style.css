@@ -1104,3 +1104,49 @@ ul li {
 div.messages.status {
     clear: both;
 }
+
+/* Some responsiveness */
+@media (max-width: 600px) {
+    .panel-2col .panel-col-first, .panel-2col .panel-col-last, 
+    .panel-3col-33 .panel-col-first, .panel-3col-33 .panel-col, .panel-3col-33 .panel-col-last,
+    .panel-3col .panel-col, .panel-3col .panel-col-first, .panel-3col .panel-col-last {
+        float: none !important;
+        width: 100% !important;
+    }
+    .ui-tabs .ui-tabs-nav li {
+        float: none !important;
+        position: inherit !important;
+        margin: inherit !important;
+    }
+    
+    .ui-tabs .ui-tabs-nav li a {
+        float: none !important;
+        padding: 0 !important;
+        text-decoration: none !important;
+    }
+    h1.site-name {
+        position: inherit;
+        top: inherit;
+        clear: both;
+        display: inherit;
+    }
+    #block-googlecse2-google-custom-search {
+        width: inherit;
+        position: inherit;
+        top: inherit;
+        right: inherit;
+        float: left;
+        clear: both;
+    }
+    .ui-tabs .ui-tabs-panel {
+        padding: 0 !important;
+    }
+    
+    .rounded-corner .wrap-corner .r-edge {
+        padding: 0 0.5em;
+    }
+    .inside h2 {
+        margin: inherit;
+    }
+}
+
