@@ -342,10 +342,6 @@ ul.secondary li.active a.active {
 #content, #main-content {
   padding: 0 1em;
 }
-#header {
-  background-color: #fff;
-  height: 115px;
-}
 #footer {
   background-color: #eee;
   padding: 1em;
