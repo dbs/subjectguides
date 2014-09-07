@@ -32,8 +32,6 @@ jQuery("#tabs").tabs();
 ', 'inline');
 ?>
 
-<br />
-
 <div class="node">
 <div id="tabs">
 	<ul>
