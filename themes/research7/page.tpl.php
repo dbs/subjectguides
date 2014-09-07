@@ -43,7 +43,6 @@
       </div>
     <?php } ?>
   </div>
-  <div><br><br></div>
   <div>
     <?php print render($page['header']); ?>
   </div>
