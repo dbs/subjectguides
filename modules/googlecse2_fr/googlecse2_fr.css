@@ -1,6 +1,8 @@
 #block-googlecse2-fr-google-custom-search {
-    float: left;
     display: inline;
+    float: left;
+    padding: 0px 1em;
+    width: 95%;
 }
 
 #gsc-input-box {
