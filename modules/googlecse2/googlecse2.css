@@ -1,8 +1,8 @@
 #block-googlecse2-google-custom-search {
     width: 25em;
-    position: absolute;
-    top: 0px;
-    right: 0px;
+    float: left;
+    display: inline;
+    margin: 0 0 0 2em;
 }
 
 #gsc-input-box {
@@ -24,4 +24,11 @@ td.gsc-table-cell-snippet-close {
 }
 td.gsc-table-cell-thumbnail.gsc-thumbnail {
     padding: 0px 8px;
+}
+
+/* Some responsiveness */
+@media (max-width: 600px) {
+    #block-googlecse2-google-custom-search {
+        width: 100%;
+    }
 }

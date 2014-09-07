@@ -362,12 +362,8 @@ ul.secondary li.active a.active {
   border: 0;
 }
 .site-name {
-  margin: 1em 0 0 0;
-  padding: 0;
-  font-size: 1.85em;
   display: inline;
-  position: relative;
-  top: 1.35em;
+  float: left;
 }
 .site-name a:link, .site-name a:visited {
   color: #1D2A54;
@@ -1038,6 +1034,7 @@ div.block-locale, div.block-locale * {
   float: right;
   margin: 0;
   padding: 0;
+  list-style: none;
 }
 
 div.block-nice_menus h2 div {
@@ -1130,18 +1127,9 @@ div.messages.status {
         clear: both;
         display: inherit;
     }
-    #block-googlecse2-google-custom-search {
-        width: inherit;
-        position: inherit;
-        top: inherit;
-        right: inherit;
-        float: left;
-        clear: both;
-    }
     .ui-tabs .ui-tabs-panel {
         padding: 0 !important;
     }
-    
     .rounded-corner .wrap-corner .r-edge {
         padding: 0 0.5em;
     }
@@ -1149,4 +1137,3 @@ div.messages.status {
         margin: inherit;
     }
 }
-
