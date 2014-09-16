@@ -1,0 +1,4 @@
+name = Ask a Librarian (French)
+description = Add an Ask a Librarian (French) box to the page
+core = 7.x
+dependencies[] = askalibrarian

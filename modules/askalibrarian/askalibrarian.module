@@ -1,0 +1,37 @@
+<?php
+/**
+* Ask a Librarian code
+*
+*/
+
+function askalibrarian_block_info() {
+  // This example comes from node.module.
+  $blocks['ask_a_librarian'] = array(
+    'info' => t('Ask a librarian'),
+    'cache' => DRUPAL_NO_CACHE,
+  );
+  return $blocks;
+}
+
+function askalibrarian_block_view($delta = '') {
+  $aal_butid = '36';
+  $aal_butdivid = '1409177876066';
+  $aal_site = '64904228';
+  $aal_title = 'Ask A Librarian';
+  // This example is adapted from node.module.
+  $block['title'] = t('');
+  $block['content'] = array(
+    '#markup' => '<div id="askalibrarian" onclick="aal_toggle(this)" style="bottom: -180px"><div class="toggle">'
+      . '<h6>' . $aal_title . '</h6></div><div class="info"><div id="lpButDivID-' . $aal_butdivid . '">&nbsp;</div>'
+      . '<script type="text/javascript" charset="UTF-8" src="https://server.iad.liveperson.net/hc/' . $aal_site
+      . '/?cmd=mTagRepstate&site=' . $aal_site . '&buttonID=' . $aal_butid . '&divID=lpButDivID-' . $aal_butdivid
+      . '&bt=1&c=1"></script></div></div>',
+    '#attached' => array(
+        'js' => array(
+          drupal_get_path('module', 'askalibrarian') . '/askalibrarian.js',
+      ),
+    ),
+  );
+  return $block;
+}
+

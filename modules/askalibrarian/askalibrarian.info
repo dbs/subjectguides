@@ -1,0 +1,4 @@
+name = Ask a Librarian
+description = Add an Ask a Librarian box to the page
+core = 7.x
+stylesheets[all][] = askalibrarian.css
