@@ -20,10 +20,12 @@
       global $base_url;
       $logo = '/images/LU.png';
       $lu_home = 'http://laurentian.ca';
-        if ($language->language == 'fr') {
+      $lib_home = 'http://laurentian.ca/library';
+      if ($language->language == 'fr') {
           $logo = '/images/UL.png';
-          $lu_home = 'http://laurentian.ca/fr';
-        }
+          $lu_home = 'http://laurentienne.ca';
+          $lib_home = 'http://laurentienne.ca/bibliotheque';
+      }
       if ($logo) {
           $logo = "$base_url/" . drupal_get_path('theme', 'research7') . $logo;
     ?>
@@ -32,7 +34,7 @@
       }
       if ($site_name) {
     ?>
-        <h1 class='site-name'><a href=" <?php print render($front_page) ?> " title=" <?php print t('Home') ?> "> <?php print render($site_name) ?> </a></h1>
+        <h1 class='site-name'><a href=" <?php print $lib_home ?> " title=" <?php print t('Home') ?> "> <?php print render($site_name) ?> </a></h1>
     <?php
       }
       if ($site_slogan) {
