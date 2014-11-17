@@ -25,7 +25,7 @@
     $page_type = 'multidis';
     $title_text = 'Multidisciplinary Databases';
     if ($language->language == 'fr') {
-      $title_text = 'Bases de données multidisciplinaire';
+      $title_text = 'Bases de données pluridisciplinaires';
     }
   } elseif (strstr($_SERVER['REQUEST_URI'], 'free') or strstr($_SERVER['REQUEST_URI'], 'gratuit')) {
     $page_type = 'trials';
