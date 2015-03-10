@@ -20,11 +20,13 @@ function askalibrarian_fr_block_view($delta = '') {
   // This example is adapted from node.module.
   $block['title'] = t('');
   $block['content'] = array(
-    '#markup' => '<div id="askalibrarian" onclick="aal_toggle(this)" style="bottom: -180px"><div class="toggle">'
+    '#markup' => '<div id="askalibrarian" onclick="aal_toggle(this)" style="bottom: -220px"><div class="toggle">'
       . '<h6>' . $aal_title . '</h6></div><div class="info"><div id="lpButDivID-' . $aal_butdivid . '">&nbsp;</div>'
       . '<script type="text/javascript" charset="UTF-8" src="https://server.iad.liveperson.net/hc/' . $aal_site
       . '/?cmd=mTagRepstate&site=' . $aal_site . '&buttonID=' . $aal_butid . '&divID=lpButDivID-' . $aal_butdivid
-      . '&bt=1&c=1"></script></div></div>',
+      . '&bt=1&c=1"></script></div>'
+      . '<a class="aal_moreinfo" href="https://biblio.laurentian.ca/research/fr/coordonn%C3%A9es-et-renseignements"><h6>En savoir plus...</h6></a>'
+      . '</div>',
     '#attached' => array(
         'js' => array(
           drupal_get_path('module', 'askalibrarian_fr') . '/askalibrarian_fr.js',
