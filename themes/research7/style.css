@@ -1132,4 +1132,14 @@ div.messages.status {
     .inside h2 {
         margin: inherit;
     }
+    .rounded-corner .l-edge, .rounded-corner .t-edge, .rounded-corner .r-edge {
+        background: none !important;
+    }
+    .rounded-corner .wrap-corner .l, .rounded-corner .wrap-corner .r {
+        background-image: none !important;
+    }
+    .ui-widget-content {
+        border: none !important;
+        background: none !important;
+    }
 }
