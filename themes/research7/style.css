@@ -1141,6 +1141,7 @@ div.messages.status {
         max-width: 15%;
         padding-top: 1em !important;
         float: left;
+        min-height: 2em;
     }
     .panel-1col .panel-col {
         max-width: 52em;
