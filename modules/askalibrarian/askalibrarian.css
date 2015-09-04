@@ -30,3 +30,8 @@
 .lpStaticButtonTR td {
   padding: 0;
 }
+@media print {
+    #askalibrarian {
+        display: none;
+    }
+}

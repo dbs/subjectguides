@@ -27,3 +27,8 @@
 .lpEmtStarRating {
   display:none;
 }
+@media print {
+    #askalibrarian {
+        display: none;
+    }
+}
