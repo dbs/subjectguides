@@ -73,6 +73,8 @@
     </ul>
   <?php
     endif;
+    /* Print the title for "News" content */
+    if ($node->type == 'news' && $title) { print "<h2>$title</h2>"; }
     print render($page['content']);
     print $feed_icons;
   ?>

@@ -116,3 +116,13 @@ function seven_css_alter(&$css) {
     $css['misc/ui/jquery.ui.theme.css']['type'] = 'file';
   }
 }
+
+/**
+ * Replace "Submitted by Foo on big long timestamp" with just a date
+ * For "News" content types only, currently.
+ */
+function research7_preprocess_node(&$vars, $hook) {
+    if ($vars['type'] == 'news') {
+        $vars['submitted'] = strftime("%F", $vars['created']);
+    }
+}
