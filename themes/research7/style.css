@@ -1143,8 +1143,10 @@ div.messages.status {
         float: left;
         min-height: 2em;
     }
-    .panel-1col .panel-col {
+    .panel-1col .panel-col, .node-news {
         max-width: 52em;
+    }
+    .panel-1col .panel-col {
         float: left;
     }
     .panel-2col .panel-col-first, .panel-2col .panel-col-last {
