@@ -2,8 +2,21 @@
 /**
 * Ask a Librarian code
 *
+* We want to switch over to the new LiveEngage code June 24, 2016
 */
 
+$is_it_time_for_liveengage_yet = FALSE;
+if (new DateTime() > new DateTime('2016-06-23 20:00:00')) { 
+  $is_it_time_for_liveengage_yet = TRUE;
+}
+
+function askalibrarian_fr_node_view($node, $view_mode, $langcode) {
+  if ($is_it_time_for_liveengage_yet && ($node->nid == 2610 or $node->nid == 3329)) { //Looking for the specific node
+    drupal_add_js(drupal_get_path('module', 'askalibrarian') . '/askalibrarian_head.js',
+        array('type' => 'file', 'requires_jquery' => FALSE, 'every_page' => FALSE)
+    );
+  }
+}
 function askalibrarian_fr_block_info() {
   // This example comes from node.module.
   $blocks['ask_a_librarian'] = array(
@@ -13,6 +26,9 @@ function askalibrarian_fr_block_info() {
   return $blocks;
 }
 function askalibrarian_fr_block_view($delta = '') {
+  if ($is_it_time_for_liveengage_yet) {
+    return null;
+  }
   $aal_butid = '37';
   $aal_butdivid = '1409239648';
   $aal_site = '64904228';
