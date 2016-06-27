@@ -10,16 +10,3 @@ function askalibrarian_node_view($node, $view_mode, $langcode) {
     );
   }
 }
-
-function askalibrarian_block_info() {
-  // This example comes from node.module.
-  $blocks['ask_a_librarian'] = array(
-    'info' => t('Ask a librarian'),
-    'cache' => DRUPAL_NO_CACHE,
-  );
-  return $blocks;
-}
-
-function askalibrarian_block_view($delta = '') {
-  return null;
-}
