@@ -143,8 +143,8 @@ HERE;
 
     // Proxy 'em if you got 'em
     if ($cur_db_proxy) {
-      $cur_db_url = "http://librweb.laurentian.ca/login?url=$cur_db_url";
-      $raw_db_url = "http://librweb.laurentian.ca/login?url=$raw_db_url";
+      $cur_db_url = "https://login.librweb.laurentian.ca/login?url=$cur_db_url";
+      $raw_db_url = "https://login.librweb.laurentian.ca/login?url=$raw_db_url";
     }
     $db_display = '';
     $db_edit = '';

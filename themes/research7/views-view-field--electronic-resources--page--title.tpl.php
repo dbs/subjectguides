@@ -23,7 +23,7 @@
  */
 if ($row->field_field_proxied[0]['raw']['value']) {
     // drupal_set_message('<pre>' . print_r($output, TRUE) . '</pre>');
-    $output = preg_replace('/href="/', 'href="http://librweb.laurentian.ca/login?url=', $output);
+    $output = preg_replace('/href="/', 'href="https://login.librweb.laurentian.ca/login?url=', $output);
 }
 ?>
 <?php print $output; ?>
