@@ -1,53 +1,12 @@
 <?php
 /**
 * Ask a Librarian code
-*
-* We want to switch over to the new LiveEngage code June 24, 2016
 */
 
-$is_it_time_for_liveengage_yet = FALSE;
-if (new DateTime() > new DateTime('2016-06-23 20:00:00')) { 
-  $is_it_time_for_liveengage_yet = TRUE;
-}
-
 function askalibrarian_fr_node_view($node, $view_mode, $langcode) {
-  if ($is_it_time_for_liveengage_yet && ($node->nid == 2610 or $node->nid == 3329)) { //Looking for the specific node
+  if ($node->nid == 2610 or $node->nid == 3329) { //Looking for the specific node
     drupal_add_js(drupal_get_path('module', 'askalibrarian') . '/askalibrarian_head.js',
         array('type' => 'file', 'requires_jquery' => FALSE, 'every_page' => FALSE)
     );
   }
-}
-function askalibrarian_fr_block_info() {
-  // This example comes from node.module.
-  $blocks['ask_a_librarian'] = array(
-    'info' => t('Ask a librarian (French)'),
-    'cache' => DRUPAL_NO_CACHE,
-  );
-  return $blocks;
-}
-function askalibrarian_fr_block_view($delta = '') {
-  if ($is_it_time_for_liveengage_yet) {
-    return null;
-  }
-  $aal_butid = '37';
-  $aal_butdivid = '1409239648';
-  $aal_site = '64904228';
-  $aal_title = 'Clavardez avec nos bibliothécaires';
-  // This example is adapted from node.module.
-  $block['title'] = t('');
-  $block['content'] = array(
-    '#markup' => '<div id="askalibrarian" onclick="aal_toggle(this)" style="bottom: -220px"><div class="toggle">'
-      . '<h6>' . $aal_title . '</h6></div><div class="info"><div id="lpButDivID-' . $aal_butdivid . '">&nbsp;</div>'
-      . '<script type="text/javascript" charset="UTF-8" src="https://server.iad.liveperson.net/hc/' . $aal_site
-      . '/?cmd=mTagRepstate&site=' . $aal_site . '&buttonID=' . $aal_butid . '&divID=lpButDivID-' . $aal_butdivid
-      . '&bt=1&c=1"></script></div>'
-      . '<a class="aal_moreinfo" href="https://biblio.laurentian.ca/research/fr/coordonn%C3%A9es-et-renseignements"><h6>En savoir plus...</h6></a>'
-      . '</div>',
-    '#attached' => array(
-        'js' => array(
-          drupal_get_path('module', 'askalibrarian_fr') . '/askalibrarian_fr.js',
-      ),
-    ),
-  );
-  return $block;
 }
