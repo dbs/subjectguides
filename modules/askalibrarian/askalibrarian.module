@@ -15,6 +15,12 @@ function askalibrarian_node_view($node, $view_mode, $langcode) {
             'requires_jquery' => FALSE,
             'every_page' => TRUE)
     );
+    drupal_add_css('.libraryh3lp { float: right; } .needs-js { display: none; }',
+        array(
+            'type' => 'inline',
+            'every_page' => TRUE
+        )
+    );
 }
 
 function askalibrarian_block_info() {
