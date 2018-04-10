@@ -4,21 +4,13 @@
 */
 
 function askalibrarian_node_view($node, $view_mode, $langcode) {
-    drupal_add_js('(function() {
-    var x = document.createElement("script"); x.type = "text/javascript"; x.async = true;
-    x.src = (document.location.protocol === "https:" ? "https://" : "http://") + "ca.libraryh3lp.com/js/libraryh3lp.js?643";
-    var y = document.getElementsByTagName("script")[0]; y.parentNode.insertBefore(x, y);
-  })();',
+    drupal_add_js(drupal_get_path('module', 'askalibrarian') .'/askalibrarian.js',
         array(
-            'type' => 'inline',
+            'type' => 'file',
             'scope' => 'footer',
             'requires_jquery' => FALSE,
-            'every_page' => TRUE)
-    );
-    drupal_add_css('.libraryh3lp { float: right; } .needs-js { display: none; }',
-        array(
-            'type' => 'inline',
-            'every_page' => TRUE
+            'every_page' => TRUE,
+            'preprocess' => TRUE
         )
     );
 }
@@ -36,7 +28,8 @@ function askalibrarian_block_view($delta = '') {
   // This example is adapted from node.module.
   $block['title'] = t('');
   $block['content'] = array(
-    '#markup' => '<div class="needs-js">loading...</div>',
+    // '#markup' => '<div class="needs-js">loading...</div>',
+    '#markup' => '',
   );
   return $block;
 }
