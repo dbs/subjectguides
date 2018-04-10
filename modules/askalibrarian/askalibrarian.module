@@ -28,9 +28,7 @@ function askalibrarian_block_view($delta = '') {
   // This example is adapted from node.module.
   $block['title'] = t('');
   $block['content'] = array(
-    // '#markup' => '<div class="needs-js">loading...</div>',
-    '#markup' => '',
+    '#markup' => '<div class="needs-js">loading...</div>',
   );
   return $block;
 }
-
