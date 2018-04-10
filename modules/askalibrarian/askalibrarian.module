@@ -4,7 +4,8 @@
 */
 
 function askalibrarian_node_view($node, $view_mode, $langcode) {
-    drupal_add_js(drupal_get_path('module', 'askalibrarian') .'/askalibrarian.js',
+    $jsfile = '/askalibrarian.js';
+    drupal_add_js(drupal_get_path('module', 'askalibrarian') . $jsfile,
         array(
             'type' => 'file',
             'scope' => 'footer',
