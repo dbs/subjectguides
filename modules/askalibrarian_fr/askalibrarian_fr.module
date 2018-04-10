@@ -4,9 +4,38 @@
 */
 
 function askalibrarian_fr_node_view($node, $view_mode, $langcode) {
-  if ($node->nid == 2610 or $node->nid == 3329) { //Looking for the specific node
-    drupal_add_js(drupal_get_path('module', 'askalibrarian') . '/askalibrarian_head.js',
-        array('type' => 'file', 'requires_jquery' => FALSE, 'every_page' => FALSE)
+    drupal_add_js(drupal_get_path('module', 'askalibrarian_fr') .'/askalibrarian_fr.js',
+        array(
+            'type' => 'file',
+            'scope' => 'footer',
+            'requires_jquery' => FALSE,
+            'every_page' => TRUE,
+            'preprocess' => TRUE
+        )
     );
-  }
+    drupal_add_css(drupal_get_path('module', 'askalibrarian_fr') .'/askalibrarian_fr.css',
+        array(
+            'type' => 'file',
+            'every_page' => TRUE,
+            'preprocess' => TRUE
+         )
+     );
+}
+
+function askalibrarian_fr_block_info() {
+  // This example comes from node.module.
+  $blocks['ask_a_librarian_fr'] = array(
+    'info' => t('Ask the library (French)'),
+    'cache' => DRUPAL_NO_CACHE,
+  );
+  return $blocks;
+}
+
+function askalibrarian_fr_block_view($delta = '') {
+  // This example is adapted from node.module.
+  $block['title'] = t('');
+  $block['content'] = array(
+    '#markup' => '<div class="needs-js">loading...</div>',
+  );
+  return $block;
 }

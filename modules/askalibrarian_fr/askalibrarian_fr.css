@@ -1,0 +1,12 @@
+.libraryh3lp { float: right; }
+.needs-js { display: none; }
+div.ui-dialog[role="dialog"] {
+    background-color: rgba(0, 0, 0, .75) !important;
+}
+#ui-id-1 {
+    background-color: rgba(255, 255, 255, .9) !important;
+}
+#ui-id-1 button {
+    border: thick white solid !important;
+    background-color: white !important;
+}
