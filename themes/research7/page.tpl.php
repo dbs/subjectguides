@@ -19,12 +19,12 @@
     <?php
       global $base_url;
       $logo = '/images/LU.png';
-      $lu_home = 'http://laurentian.ca';
-      $lib_home = 'http://laurentian.ca/library';
+      $lu_home = 'https://laurentian.ca';
+      $lib_home = 'https://biblio.laurentian.ca';
       if ($language->language == 'fr') {
           $logo = '/images/UL.png';
-          $lu_home = 'http://laurentienne.ca';
-          $lib_home = 'http://laurentienne.ca/bibliotheque';
+          $lu_home = 'https://laurentienne.ca';
+          $lib_home = 'https://biblio.laurentienne.ca';
       }
       if ($logo) {
           $logo = "$base_url/" . drupal_get_path('theme', 'research7') . $logo;
