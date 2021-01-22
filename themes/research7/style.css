@@ -1122,6 +1122,10 @@ div.messages.status {
     background: #0074BD !important;
 }
 
+.node-news .user-picture {
+    display: none;
+}
+
 /* Some responsiveness */
 @media (min-width: 1024px) {
     ul.ui-tabs-nav {
